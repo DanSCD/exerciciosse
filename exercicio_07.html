@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Algoritimo de data</h1>
+    <div id="data"></div>
+    <script>
+        let dia = prompt("Digite o dia");
+        let mes = prompt("Digite o mes");
+        let ano = prompt("Digite o ano");
+        let mes1;
+
+        if(mes == 1){
+            mes1 = "janeiro";
+        }
+        if(mes == 2){
+            mes1 = "Fevereiro";
+        }
+        if(mes == 3){
+            mes1 = "Março";
+        }
+        if(mes == 4){
+            mes1 = "Abril";
+        }
+        if(mes == 5){
+            mes1 = "Maio";
+        }
+        if(mes == 6){
+            mes1 = "Junho";
+        }
+        if(mes == 7){
+            mes1 = "Julho";
+        }
+        if(mes == 8){
+            mes1 = "Agosto";
+        }
+        if(mes == 9){
+            mes1 = "Setembro";
+        }
+        if(mes == 10){
+            mes1 = "Outubro";
+        }
+        if(mes == 11){
+            mes1 = "Novembro";
+        }
+        if(mes == 12){
+            mes1 = "Dezembro";
+        }
+
+document.getElementById("data").innerHTML = "Data: " + dia + "/" + mes + "/" + ano + "</br>" + dia + " de " + mes1 + " de " + ano;
+
+    </script>
+</body>
+</html>

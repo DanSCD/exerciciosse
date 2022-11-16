@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+</head>
+<body>
+    <h1>Comissão de um Funcionario de vendas</h1>
+    <div id="total"></div>
+<script>
+    let func = prompt("Digite o nome do funcionario");
+    let qtdProdutoVendido = prompt("Digite a quantidade vendida de produto");
+    let comissão;
+    let totalcomissão;
+
+    if(qtdProdutoVendido > 250){
+        comissão = "O valor de " + qtdProdutoVendido + " produtos vendidos, sera de R$1,50 de comissão.";
+        totalcomissão = qtdProdutoVendido * 1.50;
+    }else{
+        comissão = "O valor de " + qtdProdutoVendido + " produtos vendidos, nao sera de R$1,50 de comissão.";
+        totalcomissão = qtdProdutoVendido * 1.50;
+    }
+    if(qtdProdutoVendido > 500){
+        comissão = "O valor de " + qtdProdutoVendido + " produtos vendidos, sera de R$2,00 de comissão.";
+        totalcomissão = qtdProdutoVendido * 2;
+    }else{
+        comissão = "O valor de " + qtdProdutoVendido + " produtos vendidos, nao sera de R$2,00 de comissão.";
+        totalcomissão = qtdProdutoVendido * 2;
+    }
+
+document.getElementById("total").innerHTML = "Nome do Funcionário: " + func + "</br>Valor de Comissão: " + comissão + "</br>Total de Comissão: " + totalcomissão;
+
+
+
+
+</script>
+</body>
+</html>

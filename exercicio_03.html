@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    <h1>Pedidos</h1>
+    <h3>Promoções:</h3>
+    <h3>Big Super Duplo: 2 hamburguer, queijo, batata frita e refrigerante. Preço: R$ 5,00</h3>
+    <h3>Quase super Sanduba: 1 hamburguer, batata frita e refrigerante. Preço: R$ 3,00</h3>
+    <h3>Mirradus Sanduba: 1 misto quente e refrigerante. Preço: R$ 1,50</h3>
+    <div id="resultado"></div>
+    <script>
+
+        const BigSuperDuplo = 5;
+        const QuasesuperSanduba = 3;
+        const MirradusSanduba = 1.50;
+
+        let qtdBigSuperduplo = prompt("Digite a quantidade de Big Super Duplo");
+        let qtdQuaseSupersanduba = prompt("Digite a quantidade de Quase Super Sanduba");
+        let qtdMirradusSanduba = prompt("Digite a quantidade de Mirradus Sanduba");
+
+        let valorTotal =
+        (BigSuperDuplo * qtdBigSuperduplo)+
+        (QuasesuperSanduba * qtdQuaseSupersanduba)+
+        (MirradusSanduba * qtdMirradusSanduba);
+
+        document.getElementById("resultado").innerHTML = "Total de Pedidos: " + "</br>Big Super Duplo: " + qtdBigSuperduplo + "</br>Quase super Sanduba: " + qtdQuaseSupersanduba + "</br>Mirradus Sanduba: " + qtdMirradusSanduba + "</br>Valor Total: " + valorTotal;
+
+    </script>
+
+</body>
+</html>
