@@ -8,7 +8,8 @@
 </head>
 <body>
     <h1>Nomes e Pesos</h1>
-    <div id="Resultado"></div>
+    <div id="Resultado1"></div>
+    <p id="resultado2"></p>
 <script>
     let nome1 = prompt("Digite o primeiro nome.");
     let peso1 =Number(prompt("Digite o primeiro peso."));
@@ -18,15 +19,26 @@
     let peso3 = Number(prompt("Digite o terceiro peso."));
     let resul;
 
-    if(peso1 > peso2)(peso1 > peso3)
-    if(peso2 > 1)(peso2 > peso3)
-    if(peso3 > peso1)(peso3 > peso2);
-    document.getElementById("Resultado").innerHTML = "Nome: " + nome1 + "</br>Peso: " + peso1 + "</br>Nome: " + nome2 + "</br>Peso: " + peso2 + "</br>Nome: " + nome3 + "</br>Peso: " + peso3;
+    let troca;
+if(peso1 > peso2){
+    troca = peso2;
+    peso2 = peso1;
+    peso1 = troca;
+}
 
+if(peso3 > peso1){
+    troca = peso3;
+    peso3 = peso1;
+    peso1 = troca;
+}
 
+if(peso3 > peso2){
+    troca = peso3;
+    peso3 = peso2;
+    peso2 = troca;
+}
 
-
-
+document.getElementById("Resultado1").innerHTML = "Nome: " + nome1 + "</br>Peso: " + peso1 + "</br>Nome: " + nome2 + "</br>Peso: " + peso2 + "</br>Nome: " + nome3 + "</br>Peso: " + peso3;
 
 </script>
 </body>

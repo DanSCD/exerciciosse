@@ -8,8 +8,8 @@
 </head>
 <body>
     <h1>Sobre um aluno e suas notas</h1>
-    <div id="resultado"></div>
-
+    <div id="resultado1"></div>
+    <p id="resultado2"></p>
     <script>
         let nome1 = prompt("Digite o nome do aluno");
         let nota1 = Number(prompt("Digite a primeira nota."));
@@ -19,17 +19,37 @@
         let resul;
 
         if(media >= 6){
-            resul = "O aluno " + nome1 + " foi aprovado com a media" + media;
+            resul = "O aluno " + nome1 + " foi aprovado com a media " + media;
         }else{
-            resul = "O aluno " + nome1 + " Foi reprovado com a media" + media;
+            resul = "O aluno " + nome1 + " Foi reprovado com a media " + media;
         }
         if(media < 6){
-            resul = "O aluno " + nome1 + " foi aprovado com a media" + media;
+            resul = "O aluno " + nome1 + " foi aprovado com a media " + media;
         }else{
-            "O aluno " + nome1 + " Foi reprovado com a media" + media;
+            resul = "O aluno " + nome1 + " Foi reprovado com a media " + media;
+        }
+        document.getElementById("resultado1").innerHTML = "Nome: " + nome1 + "</br>" + "Média:" + media + "</br>" + resul;
+        
+        let troca;
+        if(nota2 > nota1){
+            troca = nota2;
+            nota2 = nota1;
+            nota1 = troca;
         }
 
-        document.getElementById("resultado").innerHTML = "Nome: " + nome1 + "</br>1° nota:" + nota1 + "</br>2° nota:" + nota2 + "</br>3°nota:" + nota3 + "</br>" + "Média:" + media + "</br>" + resul;
+        if(nota3 > nota1){
+            troca = nota3;
+            nota3 = nota1;
+            nota1 = troca;
+        }
+
+        if(nota3 >nota2){
+            troca = nota3;
+            nota3 = nota2;
+            nota2 = troca;
+        }
+
+        document.getElementById("resultado2").innerHTML = "Nota1: " + nota1 + "</br>Nota2: " + nota2 + "</br>Nota3: " + nota3;
     </script>
 </body>
 </html>
